@@ -1,15 +1,13 @@
-mrlesmithjr.mdadm
-=================
+# ansible-mdadm
+
 
 An [Ansible] role to install and manage [mdadm] raid arrays.
 
-Requirements
-------------
+## Requirements
 
 - Available unpartitioned disk devices
 
-Role Variables
---------------
+## Role Variables
 
 ```
 ---
@@ -47,38 +45,27 @@ mdadm_arrays:
   #   state: 'present'
 ```
 
-Dependencies
-------------
+## Dependencies
 
 None
 
-Example Playbook
-----------------
+## Install
+
+clone git into /etc/ansible/roles/ansible-mdadm
+
+
+## Playbook
 
 ```
-- hosts: all
+
+---
+- hosts: localhost
   become: true
   vars:
   roles:
     - role: ansible-mdadm
   tasks:
+
 ```
 
-License
--------
 
-BSD
-
-Author Information
-------------------
-
-Larry Smith Jr.
-- [@mrlesmithjr]
-- [EverythingShouldBeVirtual]
-- mrlesmithjr [at] gmail.com
-
-[@mrlesmithjr]: <https://www.twitter.com/mrlesmithjr>
-[EverythingShouldBeVirtual]: <http://www.everythingshouldbevirtual.com>
-
-[mdadm]: <https://linux.die.net/man/8/mdadm>
-[Ansible]: <https://www.ansible.com>
